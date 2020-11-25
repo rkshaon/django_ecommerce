@@ -7,7 +7,7 @@
       <img class="thumbnail" src="{{ product.imageURL }}" alt="">
       <div class="box-element product">
         <h6><strong>{{ product.name }}</strong> </h6>
-        <button type="button" name="button" class="btn btn-outline-secondary add-btn">Add to cart</button>
+        <button data-product={{ product.id }} data-action="add" type="button" name="button" class="btn btn-outline-secondary add-btn update-cart">Add to cart</button>
         <a href="#" class="btn btn-outline-success">View</a>
         <h4 style="display: inline-block; float: right">${{ product.price | floatformat:2 }}</h4>
       </div>

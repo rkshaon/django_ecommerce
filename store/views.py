@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import JsonResponse
+import json
 from store.models import *
 
 def store(request):
@@ -35,3 +37,11 @@ def checkout(request):
         'order': order,
     }
     return render(request, 'checkout.html', context)
+
+def updateItem(request):
+    data = json.loads(request.body)
+    productId = data['productId']
+    action = data['action']
+    print('Action:', action)
+    print('Product ID:', productId)
+    return JsonResponse('Item was added', safe=False)

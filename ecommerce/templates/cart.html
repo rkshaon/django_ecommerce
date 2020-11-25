@@ -38,7 +38,7 @@
             <img class="chg-quantity" src="{% static  'images/arrow-down.png' %}">
 					</div>
         </div>
-        <div style="flex:1"><p>{{ item.get_total }} BDT</p></div>
+        <div style="flex:1"><p>{{ item.get_total | floatformat:2 }} BDT</p></div>
       </div>
       {% endfor %}
     </div>

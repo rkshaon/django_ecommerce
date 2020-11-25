@@ -53,7 +53,7 @@
 			<div class="cart-row">
         <div style="flex:2"><img class="row-image" src="{{ item.product.imageURL }}"></div>
 				<div style="flex:2"><p>{{ item.product.name }}</p></div>
-				<div style="flex:1"><p>{{ item.get_total }} BDT</p></div>
+				<div style="flex:1"><p>{{ item.get_total | floatformat:2 }} BDT</p></div>
 				<div style="flex:1"><p>x {{ item.quantity }}</p></div>
       </div>
       {% endfor %}

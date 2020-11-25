@@ -21,6 +21,14 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url
+
 class Order(models.Model):
     """Order Model"""
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)

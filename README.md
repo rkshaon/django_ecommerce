@@ -1,6 +1,6 @@
 # django_ecommerce
 
-To run the project
+## To run the project
 1. Install python
 2. Open Command Prompt
 3. Write `git clone https://github.com/rkshaon/django_ecommerce.git` and press enter
@@ -8,7 +8,7 @@ To run the project
 4. Write `python manage.py runsever` and enter
 
 
-Features:
+## Features:
 1. store
 2. cart
 3. checkout

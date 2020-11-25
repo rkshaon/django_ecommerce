@@ -1,4 +1,4 @@
-# django_ecommerce
+# Django Ecommerce Project
 
 ## To run the project
 1. Install python
@@ -10,8 +10,8 @@
 
 
 ## Features:
-1. store
-2. cart
-3. checkout
+1. Store - where showed all the product on sale.
+2. Cart - where showed the product which was 'add to cart' for logged in customer.
+3. Checkout - where showed the cart summary and billing address.
 
 <!-- https://github.com/justdjango/django_project_boilerplate/edit/master/README.md -->

@@ -11,3 +11,5 @@ Features:
 1. store
 2. cart
 3. checkout
+
+<!-- https://github.com/justdjango/django_project_boilerplate/edit/master/README.md -->

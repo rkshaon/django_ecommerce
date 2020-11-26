@@ -5,6 +5,7 @@
   <div class="col-lg-6">
     <div class="box-element" id="form-wrapper">
       <form id="form">
+        {% csrf_token %}
         <div id="user-info">
           <div class="form-field">
             <input required class="form-control" type="text" name="name" placeholder="Name..">
@@ -86,6 +87,9 @@
 
   // form variable
   var form = document.getElementById('form')
+
+  csrftoken = form.getElementsByTagName('input')[0].value
+  console.log('NewToken: ', form.getElementsByTagName('input')[0].value)
   // form event handler
   form.addEventListener('submit', function(e){
     e.preventDefault()
@@ -110,15 +114,13 @@
       'city': null,
       'state': null,
       'zipcode': null,
-      'country': null,
     }
 
     if (shipping != 'False') {
       shippingInfo.address = form.address.value
-      shipping.city = form.city.value
-      shipping.state = form.state.value
-      shipping.zipcode = form.zipcode.value
-      shipping.country = form.country.value
+      shippingInfo.city = form.city.value
+      shippingInfo.state = form.state.value
+      shippingInfo.zipcode = form.zipcode.value
     }
 
     if (user == 'AnonymousUser') {

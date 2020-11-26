@@ -79,6 +79,9 @@ def updateItem(request):
         orderItem.delete()
     return JsonResponse('Item was added', safe=False)
 
+# solution for ignitor mode unauthorized user
+# from django.views.decorators.csrf import csrf_exempt
+# @csrf_exempt
 def processOrder(request):
     transaction_id = datetime.datetime.now().timestamp()
     data = json.loads(request.body)
@@ -94,14 +97,13 @@ def processOrder(request):
         order.save()
 
         if order.shipping == True:
-            ShippingAddress.objects.created(
+            ShippingAddress.objects.create(
                 customer = customer,
                 order = order,
                 address = data['shipping']['address'],
                 city = data['shipping']['city'],
                 state = data['shipping']['state'],
-                zipcode = data['shipping']['zipcode'],
-                country = data['shipping']['country']
+                zipcode = data['shipping']['zipcode']
             )
     else:
         print('user is not logged in')

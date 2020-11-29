@@ -11,11 +11,11 @@
 
 ## Features:
 ###### 1. Store
-  where displayed all the product on sale.
+  where displayed *all the product* on sale.
 ###### 2. Cart
-  where displayed the product which was 'add to cart' for authorized and unauthorized customer both.
+  where displayed the product which was *add to cart* for authorized and unauthorized customer both.
 ######3. Checkout
-  where displayed the cart summary and billing address.
-###### 4. Paypal payment integration
+  where displayed the *cart summary and billing address*.
+###### 4. *Paypal* payment integration
 
 <!-- https://github.com/justdjango/django_project_boilerplate/edit/master/README.md -->

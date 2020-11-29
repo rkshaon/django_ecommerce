@@ -65,7 +65,12 @@
   </div>
 </div>
 <script type="text/javascript">
+  // var shipping = '{{ order.shipping }}'
   var shipping = '{{ order.shipping }}'
+  console.log('user:', user)
+  console.log('shipping:', shipping)
+  var order = '{{ order }}'
+  console.log('order:', order)
   var total = '{{order.get_cart_total|floatformat:2}}'
 
   // if the shipping item is digital then hide shipping address
@@ -141,6 +146,8 @@
     .then((data) => {
       console.log('Sucess:', data)
       alert('Transaction Completed, thanks for shopping')
+      cart = {}
+      document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/"
       window.location.href = "{% url 'store' %}"
     })
   }
